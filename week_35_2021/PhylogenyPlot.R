@@ -183,4 +183,4 @@ ggtree(merged_tree,aes(colour=Value),
                                         colour = BCKg),
         plot.margin = margin(15, 25, 15, 25),
         legend.position = c(0.1,0.75))
-ggsave("LemurSexualDimorphismPhylosquared.png", width = 40.09091, height = 21, units = "cm", device = png )
+ggsave("LemurSexualDimorphismPhylo.png", width = 40.09091, height = 21, units = "cm", device = png )
