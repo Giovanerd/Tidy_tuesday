@@ -20,8 +20,8 @@ library(cowplot)
 tuesdata <- tidytuesdayR::tt_load(2021, week = 36)
 bird_baths <- tuesdata$bird_baths
 
+#The taxonomy file can be downloaded here https://data.vertlife.org/birdtree/BLIOCPhyloMasterTax.csv
 # Loading the taxonomy file, it will be usful to group birds into families and orders
-
 taxonomyfile<-read.csv("~/YOURFILEPATH/BLIOCPhyloMasterTax.csv")
 
 # Some names in the bird bath dataset do not fit with the ones provided in the Taxonomy dataset,
@@ -61,7 +61,8 @@ bird_bathssummed<-bird_baths[which(is.na(bird_baths$survey_year)),]
 bird_baths<-bird_baths[-which(is.na(bird_baths$survey_year)),]
 
 # PREPARING THE SHAPE FILES ----
-
+#Shape file can be downloaded here
+#https://www.environment.gov.au/fed/catalog/search/resource/details.page?uuid=%7B4A2321F0-DD57-454E-BE34-6FD4BDE64703%7D
 #Reading the Shape files from whole australian region 
 Bioregions_whole <- st_read("YOURFILEPATH/ibra7_regions.shp")
 
